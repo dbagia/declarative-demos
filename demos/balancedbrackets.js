@@ -35,8 +35,8 @@ const checkBraces = (o) => {
     return isLengthEven(o)?removeAdjacentBrackets(o):Maybe.of(null)
 }
 
-export const initiate = () => {
-    let v = checkBraces(Maybe.of("{{{{}}}}[{(((())))}]"))
+export const initiate = (input) => {
+    let v = checkBraces(Maybe.of(input)) //"{{{{}}}}[{(((())))}]"
     console.log('v', v)
     return v
 }
