@@ -1,6 +1,6 @@
 import R from 'ramda'
-import Maybe from '../utils/maybe'
-import { map, isEven } from '../utils/maybe'
+import Maybe from '../../utils/maybe'
+import { map, isEven } from '../../utils/maybe'
 
 const pipe = R.pipe
 
