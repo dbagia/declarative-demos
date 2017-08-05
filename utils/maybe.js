@@ -24,7 +24,5 @@ export const map = curry(function(f, any_functor_at_all) {
   return any_functor_at_all.map(f);
 });
 
-export const isEven = (a) => a%2 === 0
-
 export default Maybe
 

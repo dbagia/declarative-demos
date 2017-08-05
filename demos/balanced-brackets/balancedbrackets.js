@@ -1,18 +1,20 @@
 import R from 'ramda'
 import Maybe from '../../utils/maybe'
-import { map, isEven } from '../../utils/maybe'
-
+import { map } from '../../utils/maybe'
+import { getLength, isEven } from '../../utils/commons'
 const pipe = R.pipe
+const id = R.identity
 
-const length = (braces) => {
-    return braces.map(function(v){
-        return v.length
-    })    
-}
+const lengthOf = pipe(id, map(getLength))
 
+//isLengthEven::Maybe->Maybe
+export const isLengthEven = pipe(map(getLength), map(isEven))
+
+//removeAdjacentBrackets::Maybe->Maybe
 export const removeAdjacentBrackets = (braces) => {
+    
     const regex = /{}|\[\]|\(\)/g
-    const bracesLen = length(braces)
+    const bracesLen = lengthOf(braces) //length(braces)
 
     if(braces.is(true)) {
         return Maybe.of(true)
@@ -29,10 +31,8 @@ export const removeAdjacentBrackets = (braces) => {
     )
 }
 
-const isLengthEven = pipe(length, map(isEven))
-
-const checkBraces = (o) => {
-    return isLengthEven(o)?removeAdjacentBrackets(o):Maybe.of(null)
+const checkBraces = (o) => {    
+    return isLengthEven(o).is(true)?removeAdjacentBrackets(o):Maybe.of(null)
 }
 
 export const initiate = (input) => {
