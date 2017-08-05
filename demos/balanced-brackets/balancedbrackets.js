@@ -36,7 +36,6 @@ const checkBraces = (o) => {
 }
 
 export const initiate = (input) => {
-    let v = checkBraces(Maybe.of(input)) //"{{{{}}}}[{(((())))}]"
-    console.log('v', v)
+    let v = checkBraces(Maybe.of(input)) //"{{{{}}}}[{(((())))}]"    
     return v
 }
