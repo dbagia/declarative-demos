@@ -4,7 +4,7 @@
   "description": "Examples of problems solved in a declarative way",
   "main": "index.js",
   "scripts": {
-    "test": "mocha tests/index-test.js --compilers js:babel-core/register"
+    "test": "mocha --compilers js:babel-core/register"
   },
   "author": "Dipen Bagia",
   "license": "ISC",

@@ -20,4 +20,8 @@ The solution has two functions
 
 1. stateRules: This is a pure function which accepts two parameters, state and command(0 or 1). Based on the rules described above, it will return either q1, q2 or q3.
 
-2. readCommands: This function accepts an array of commands and an initial state. It uses stateRules function to determine the next state for each of it's array values. We are using array.reduce() to determine the next state. Since the function should return true if the end result is 'q2' and false otherwise, we use Ramda's R.equals to do the comparison. 
+2. readCommands: This function accepts an array of commands and an initial state. It uses stateRules function to determine the next state for each of it's array values. We are using array.reduce() to determine the next state. Since the function should return true if the end result is 'q2' and false otherwise, we use Ramda's R.equals to do the comparison.
+
+## Running the tests
+
+`npm test -- demos/automoton/tests.js`
