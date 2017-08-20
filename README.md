@@ -10,3 +10,7 @@ It uses a [Ramda](http://ramdajs.com/) as a helper library and the ideas have be
 1. `git clone https://github.com/dbagia/declarative-demos.git`
 2. `npm install`
 3. `npm test -- demos/<demo-folder-name>/tests.js`
+
+## Documentation
+
+Each folder under demos has got it's own README explaining the problem, declarative approach and implementation as well as tests.
