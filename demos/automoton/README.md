@@ -14,7 +14,7 @@ q3 moves to q2 when given a 0 or 1.
 
 Our automaton should return whether we end in our accepted state, or not (true/false.)
 
-## The solution
+## The Solution
 
 The solution has two functions
 
