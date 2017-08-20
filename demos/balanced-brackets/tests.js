@@ -1,8 +1,8 @@
 import {assert, expect} from 'chai'
-import { initiate, isLengthEven } from '../demos/balanced-brackets/balancedbrackets'
-import { getLength, isEven } from '../utils/commons'
-import Maybe from '../utils/maybe'
-import { map } from '../utils/maybe'
+import { initiate, isLengthEven } from './balancedbrackets'
+import { getLength, isEven } from '../../utils/commons'
+import Maybe from '../../utils/maybe'
+import { map } from '../../utils/maybe'
 import R from 'ramda'
 
 describe('Balanced Brackets', ()=>{
