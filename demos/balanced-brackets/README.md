@@ -6,13 +6,15 @@ Two brackets are considered to be a matched pair if the an opening bracket (i.e.
 
 A matching pair of brackets is not balanced if the set of brackets it encloses are not matched. For example, {[(])} is not balanced because the contents in between { and } are not balanced. The pair of square brackets encloses a single, unbalanced opening bracket, (, and the pair of parentheses encloses a single, unbalanced closing square bracket, ].
 
-## The Solution - using imperative way
+## The Solution 
+
+### using imperative way (only for discussion, not implemented)
 
 If you are using an imperative method, this problem can be solved a Stack Data Structure.
 
 The basic idea in imperative method is to scan through the input string of braces and keep pushing all the opening braces into the stack. Once a closing brace is found, pop a brace from the stack and if these two do not match, the input is unbalanced else continue to push and pop until the input string is fully scanned and if the stack is empty at the end, the input is balanced otherwise it is unbalanced. 
 
-### Solving it in declarative way
+### using declarative way
 
 The declarative approach requires us to describe the properties of the domain and the end state. 
 
