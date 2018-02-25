@@ -10,7 +10,7 @@ A matching pair of brackets is not balanced if the set of brackets it encloses a
 
 ### using imperative way (only for discussion, not implemented)
 
-If you are using an imperative method, this problem can be solved a Stack Data Structure.
+If you are using an imperative method, this problem can be solved using a Stack Data Structure.
 
 The basic idea in imperative method is to scan through the input string of braces and keep pushing all the opening braces into the stack. Once a closing brace is found, pop a brace from the stack and if these two do not match, the input is unbalanced else continue to push and pop until the input string is fully scanned and if the stack is empty at the end, the input is balanced otherwise it is unbalanced. 
 
