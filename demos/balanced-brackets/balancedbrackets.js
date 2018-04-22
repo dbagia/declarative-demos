@@ -16,7 +16,7 @@ const id = R.identity
 const lengthOf = pipe(id, chain(prop('length')))
 
 //isLengthEven::Maybe->Maybe
-export const isLengthEven = pipe(chain(prop('length')), map(isEven))
+export const isLengthEven = pipe(lengthOf, map(isEven))
 
 //removeAdjacentBrackets::Maybe->Maybe
 export const removeAdjacentBrackets = braces => {
