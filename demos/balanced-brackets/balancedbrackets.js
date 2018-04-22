@@ -1,7 +1,5 @@
 import R from 'ramda'
 import Maybe from 'crocks/Maybe'
-//import Maybe from '../../utils/maybe'
-//import { map } from '../../utils/maybe'
 import map from 'crocks/pointfree/map'
 import chain from 'crocks/pointfree/chain'
 import { getLength, isEven, logger } from '../../utils/commons'
@@ -12,7 +10,7 @@ const id = R.identity
 const lengthOf = pipe(id, chain(prop('length')))
 
 //isLengthEven::Maybe->Maybe
-export const isLengthEven = pipe(logger, chain(prop('length')), logger, map(isEven))
+export const isLengthEven = pipe(chain(prop('length')), map(isEven))
 
 //removeAdjacentBrackets::Maybe->Maybe
 export const removeAdjacentBrackets = (braces) => {

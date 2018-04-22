@@ -4,8 +4,6 @@ import { getLength, isEven } from '../../utils/commons'
 import Maybe from 'crocks/Maybe'
 import map from 'crocks/pointfree/map'
 import chain from 'crocks/pointfree/chain'
-//import Maybe from '../../utils/maybe'
-//import { map } from '../../utils/maybe'
 import R from 'ramda'
 import prop from 'crocks/Maybe/prop'
 const { Just, Nothing } = Maybe
