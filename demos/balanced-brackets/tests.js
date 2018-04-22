@@ -1,20 +1,25 @@
 import {assert, expect} from 'chai'
 import { initiate, isLengthEven } from './balancedbrackets'
 import { getLength, isEven } from '../../utils/commons'
-import Maybe from '../../utils/maybe'
-import { map } from '../../utils/maybe'
+import Maybe from 'crocks/Maybe'
+import map from 'crocks/pointfree/map'
+import chain from 'crocks/pointfree/chain'
+//import Maybe from '../../utils/maybe'
+//import { map } from '../../utils/maybe'
 import R from 'ramda'
+import prop from 'crocks/Maybe/prop'
+const { Just, Nothing } = Maybe
 
 describe('Balanced Brackets', ()=>{
     it('should return a true', ()=>{
 
-        expect(initiate("{{{{}}}}[{(((())))}]").is(true)).to.be.true
+        expect(initiate("{{{{}}}}[{(((())))}]").equals(Just(true))).to.be.true
         
     })
 
     it('should return a null', ()=>{
 
-        expect(initiate("{{{{}}}}[{(((())))}]))))))))").is(null)).to.be.true
+        expect(initiate("{{{{}}}}[{(((())))}]))))))))").equals(Nothing())).to.be.true
 
     })
 
@@ -22,19 +27,20 @@ describe('Balanced Brackets', ()=>{
         
         const inputString = "{{{{}}}}[{(((())))}]"
         
-        const result = isLengthEven(Maybe.of(inputString))
+        const result = isLengthEven(Just(inputString))
+        console.log(result)
 
-        expect(result.is(true)).to.be.true
+        expect(result.equals(Just(true))).to.be.true
         
     })
 
     it('should return the correct length', ()=>{
 
-        const checkLength = R.pipe(Maybe.of, map(getLength))
+        const checkLength = R.pipe(Just, chain(prop('length')))
 
         const result = checkLength('xxxxxx')
         
-        expect(result.is(6)).to.be.true
+        expect(result.equals(Just(6))).to.be.true
     })
 
 })

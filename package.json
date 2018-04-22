@@ -4,12 +4,13 @@
   "description": "Examples of problems solved in a declarative way",
   "main": "index.js",
   "scripts": {
-    "test": "standard && mocha --compilers js:babel-core/register"
+    "test": "mocha --compilers js:babel-core/register"
   },
   "author": "Dipen Bagia",
   "license": "ISC",
   "dependencies": {
-    "chai": "^4.1.0"
+    "chai": "^4.1.0",
+    "crocks": "^0.9.3"
   },
   "devDependencies": {
     "babel-core": "6.25.0",
