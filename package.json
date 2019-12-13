@@ -9,7 +9,7 @@
   "author": "Dipen Bagia",
   "license": "ISC",
   "dependencies": {
-    "chai": "^4.1.0",
+    "chai": "^4.2.0",
     "crocks": "^0.9.3"
   },
   "devDependencies": {
