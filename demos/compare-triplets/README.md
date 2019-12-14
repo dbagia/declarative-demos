@@ -26,3 +26,14 @@ compareTriplets has the following parameter(s):
 a: an array of integers representing Alice's challenge rating
 b: an array of integers representing Bob's challenge rating
 
+## The Solution
+
+One possible imperative way is create an output array and loop through/map both the input arrays, do an `if` comparison and update the output array based on the result of the comparison.
+
+Thinking declaratively, below are the facts about this situation:
+
+1. The input is two numeric arrays of length 3 (since they are triplets)
+2. The output is a single numeric array of length 2
+3. To derive the output, we can subtract array b from array a, remove all the zeros from the resultant array
+4. The output is [number of positive entries, number of negative entries]
+
