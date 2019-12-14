@@ -8,8 +8,8 @@ It uses a [Ramda](http://ramdajs.com/) as a helper library and the ideas have be
 ## How to run
 
 1. `git clone https://github.com/dbagia/declarative-demos.git`
-2. `npm install`
-3. `npm test -- demos/<demo-folder-name>/tests.js`
+2. `yarn`
+3. `yarn test`
 
 ## Documentation
 
